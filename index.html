@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Hired in 30 Days | Devashish Chakravarty</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+        padding-top: 80px;
+        /* background: url(images/background_page.jpg);
+  background-size: cover;
+  opacity: 0.95; */
+      }
+
+      nav {
+        background: #fff;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-links a {
+        margin-left: 2rem;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .hero {
+        /* background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%); */
+        background: url(images/background_main.jpg);
+  background-size: cover;
+  opacity: 0.95;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 6rem 2rem;
+        color: white;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .book-cover {
+        max-width: 100%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        transform: rotate(-5deg);
+        transition: transform 0.3s ease;
+      }
+
+      .book-cover:hover {
+        transform: rotate(0deg) scale(1.05);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+        color: #2d3436;
+      }
+
+      .highlights {
+        padding: 6rem 2rem;
+        background: white;
+      }
+
+      .highlights-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .highlight-card {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .chapters {
+        padding: 6rem 2rem;
+        background: #f8f9fa;
+      }
+
+      .chapter-list {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .chapter-item {
+        background: white;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+      }
+
+      .chapter-number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ff6b6b;
+        margin-right: 1rem;
+        min-width: 40px;
+      }
+
+      .about-author {
+        padding: 6rem 2rem;
+        background: white;
+      }
+
+      .author-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 3rem;
+        padding: 1rem;
+      }
+
+      .author-image {
+        width: 200px;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .author-description {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #333;
+        padding-top: 1rem;
+        text-align: justify;
+      }
+
+      .author-description p + p {
+        margin-top: 1rem;
+      }
+
+      .user-reviews {
+        padding: 6rem 2rem;
+        background: #f8f9fa;
+      }
+
+      .reviews-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .review-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .rating {
+        color: #ffd700;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .author-info{
+        padding-top: 1rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: #161515;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 2rem;
+        transition: transform 0.2s;
+      }
+      .nav-content .cta-button {
+        color: white;
+        margin-left: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        background: white;
+        color: #ff6b6b;
+        cursor: pointer;
+        border-color: #161515;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+        margin-left: 20px;
+      }
+
+      #faq {
+        padding: 6rem 2rem;
+        background: white;
+        align-items: center;
+      }
+      .faq-title {
+        font-size: 2rem;
+        color: #2d3436;
+        margin-bottom: 1.5rem;
+      }
+
+      .accordion-item {
+        background: #f8f9fa;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+
+      .accordion-question {
+        padding: 1.5rem;
+        font-weight: 500;
+        color: #333;
+        transition: color 0.3s;
+        font-size: 1rem;
+      }
+
+      .accordion-answer {
+        padding: 1rem 1.5rem;
+        display: none;
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      .accordion-active .accordion-question {
+        color: #ff6b6b;
+        font-weight: bold;
+      }
+
+      .accordion-active .accordion-answer {
+        display: block;
+      }
+
+      /* Mobile Navbar */
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+      }
+      .mobile-menu a,
+      .mobile-menu .cta-button {
+        padding: 1rem;
+        border-bottom: 1px solid #f0f0f0;
+        text-align: center;
+        width: 100%;
+      }
+
+      footer {
+        background: #2d3436;
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content,
+        .author-content .faq-section {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        nav h1 {
+          margin: auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .author-content {
+          flex-direction: column;
+          text-align: center;
+          gap: 1rem;
+        }
+
+        .author-photo {
+          width: 150px;
+          margin-bottom: 1rem;
+        }
+
+        .author-description{
+          text-align: left;
+        }
+      }
+
+      .show-menu {
+        display: flex;
+      }
+
+      /* Social Media Links */
+      .social-media-links {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        padding-left: 30px;
+      }
+      .social-media-links img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.2s ease;
+      }
+
+      .social-media-links img:hover {
+        transform: scale(1.1);
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-content">
+        <h1>Get Hired in 30 Days</h1>
+        <div class="nav-links">
+          <a href="#highlights">Highlights</a>
+          <a href="#chapters">Chapters</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#author">Author</a>
+          <a href="#faq">FAQ</a>
+          <a href="#buy" class="cta-button">Buy Now</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+      </div>
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#chapters">Chapters</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#author">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a href="#buy" class="cta-button">Buy Now</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div data-aos="fade-right">
+          <img
+            src="images/Book img.jpg"
+            alt="Get Hired in 30 Days Book Cover"
+            class="book-cover"
+          />
+        </div>
+        <div data-aos="fade-left">
+          <h1>Transform Your Job Search in Just 30 Days</h1>
+          <p>
+            Master the art of job hunting with proven strategies and expert
+            guidance
+          </p>
+          <a href="#buy" class="cta-button">Get Your Copy Now</a>
+          <section class="social-media-links">
+            <a href="#" target="_blank"
+              ><img src="images/twitter_icon.png" alt="My Twitter page"
+            /></a>
+            <a href="#" target="_blank"
+              ><img src="images/facebook_icon.png" alt="My Facebook page"
+            /></a>
+            <a href="#" target="_blank"
+              ><img src="images/instagram_icon.png" alt="My Instagram page"
+            /></a>
+            <a href="#" target="_blank"
+              ><img src="images/Linkedin_icon.png" alt="My LinkedIn page"
+            /></a>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights" id="highlights">
+      <h2 class="section-title">Book Highlights</h2>
+      <div class="highlights-grid">
+        <div class="highlight-card" data-aos="fade-up">
+          <h3>📝 Resume Mastery</h3>
+          <p>
+            Learn to craft an ATS-friendly resume that stands out to recruiters
+          </p>
+        </div>
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>🎯 Interview Preparation</h3>
+          <p>
+            Master the STAR method and answer tough interview questions with
+            confidence
+          </p>
+        </div>
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>🌐 LinkedIn Optimization</h3>
+          <p>
+            Create a compelling profile that attracts recruiters and
+            opportunities
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapters" id="chapters">
+      <h2 class="section-title">What's Inside</h2>
+      <div class="chapter-list">
+        <div class="chapter-item" data-aos="fade-up">
+          <span class="chapter-number">01</span>
+          <div>
+            <h3>Foundation: Understanding the Modern Job Market</h3>
+            <p>
+              Learn how hiring has evolved and what employers look for today
+            </p>
+          </div>
+        </div>
+        <div class="chapter-item" data-aos="fade-up">
+          <span class="chapter-number">02</span>
+          <div>
+            <h3>Building Your Personal Brand</h3>
+            <p>
+              Create a compelling professional identity that resonates with
+              employers
+            </p>
+          </div>
+        </div>
+        <div class="chapter-item" data-aos="fade-up">
+          <span class="chapter-number">03</span>
+          <div>
+            <h3>Networking Strategies That Work</h3>
+            <p>
+              Master both online and offline networking to uncover hidden
+              opportunities
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-author" id="author" style="padding: 4rem 2rem;">
+      <h2 class="section-title" style="text-align: center;">About the Author</h2>
+      <div class="author-content">
+        <div data-aos="fade-right">
+          <img
+            src="images/devashish-chakravarty.jpeg"
+            alt="Devashish Chakravarty, Author of Get Hired in 30 Days"
+            class="author-image"
+          />
+        </div>
+        <div data-aos="fade-left">
+          <h3>Devashish Chakravarty</h3>
+          <div class="author-description">
+            With over 15 years of experience in career coaching and HR
+            consulting, Devashish has helped thousands of professionals land
+            their dream jobs. His unique approach combines practical strategies
+            with psychological insights to help job seekers navigate the modern
+            job market.
+            After working with leading corporations and witnessing the
+            challenges faced by job seekers, he developed this comprehensive
+            30-day program that has proven successful for professionals across
+            industries.
+            Devashish is also a regular contributor to leading business
+            publications and a sought-after speaker on career development
+            topics.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="user-reviews" id="reviews">
+      <h2 class="section-title">Reader Reviews</h2>
+      <div class="reviews-grid">
+        <div class="review-card" data-aos="fade-up">
+          <div class="rating">★★★★★</div>
+          <p>
+            "The structured approach and daily tasks made my job search so much
+            more effective. I landed a role at my dream company within 25 days!"
+          </p>
+          <div class="author-info">
+            <h4>Sarah Johnson</h4>
+            <p>Software Engineer</p>
+          </div>
+        </div>
+        <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="rating">★★★★★</div>
+          <p>
+            "This book completely changed my approach to job hunting. The
+            networking strategies alone are worth the price."
+          </p>
+          <div class="author-info">
+            <h4>Michael Chen</h4>
+            <p>Marketing Manager</p>
+          </div>
+        </div>
+        <div class="review-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="rating">★★★★★</div>
+          <p>
+            "As a career changer, this book gave me the confidence and tools I
+            needed to successfully transition into a new industry."
+          </p>
+          <div class="author-info">
+            <h4>Emma Thompson</h4>
+            <p>Career Changer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="faq">
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+      <div class="accordion-item">
+        <div class="accordion-question">What is this book about?</div>
+        <div class="accordion-answer">
+          This book is a guide to help job seekers get hired within 30 days. It
+          provides actionable tips, resume-building advice, and interview
+          preparation strategies.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-question">Who is the author?</div>
+        <div class="accordion-answer">
+          The author, Devashish Chakravarty, is a seasoned career coach and
+          mentor, offering his expertise in job search strategies and career
+          growth.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-question">Can I buy it online?</div>
+        <div class="accordion-answer">
+          Yes, the book is available online on popular platforms. You can click
+          the "Buy Now" button to get your copy.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-question">How long does it take to read?</div>
+        <div class="accordion-answer">
+          You can read it in a few sittings, but the real impact comes from
+          following the 30-day plan.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-question">Does this apply to all industries?</div>
+        <div class="accordion-answer">
+          Yes, the strategies can be customized for any industry or role.
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        © 2024 Get Hired in 30 Days by Devashish Chakravarty. All rights
+        reserved.
+      </p>
+      <div style="margin-top: 1rem">
+        <a href="#" style="color: white; margin: 0 1rem">Privacy Policy</a>
+        <a href="#" style="color: white; margin: 0 1rem">Terms of Service</a>
+        <a href="#" style="color: white; margin: 0 1rem">Contact</a>
+      </div>
+    </footer>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("show-menu");
+      }
+
+      const accordionItems = document.querySelectorAll(".accordion-item");
+
+      accordionItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("accordion-active");
+        });
+      });
+    </script>
+  </body>
+</html>
