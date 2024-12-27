@@ -1,0 +1,358 @@
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+        padding-top: 80px;
+
+      }
+
+      nav {
+        background: #fff;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-links a {
+        margin-left: 2rem;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+
+      .hero {
+        /* background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%); */
+        background: url(images/background_main.jpg);
+  background-size: cover;
+  opacity: 0.95;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 6rem 2rem;
+        color: white;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .book-cover {
+        max-width: 100%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        transform: rotate(-5deg);
+        transition: transform 0.3s ease;
+      }
+
+      .book-cover:hover {
+        transform: rotate(0deg) scale(1.05);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 2.5rem;
+        color: #2d3436;
+      }
+
+      .highlights {
+        padding: 6rem 2rem;
+        background: white;
+      }
+
+      .highlights-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .highlight-card {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .chapters {
+        padding: 6rem 2rem;
+        background: #f8f9fa;
+      }
+
+      .chapter-list {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .chapter-item {
+        background: white;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+      }
+
+      .chapter-number {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ff6b6b;
+        margin-right: 1rem;
+        min-width: 40px;
+      }
+
+      .about-author {
+        padding: 6rem 2rem;
+        background: white;
+      }
+
+      .author-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 3rem;
+        padding: 1rem;
+      }
+
+      .author-image {
+        width: 200px;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .author-description {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #333;
+        padding-top: 1rem;
+        text-align: justify;
+      }
+
+      .author-description p + p {
+        margin-top: 1rem;
+      }
+
+      .user-reviews {
+        padding: 6rem 2rem;
+        background: #f8f9fa;
+      }
+
+      .reviews-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .review-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .rating {
+        color: #ffd700;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .author-info{
+        padding-top: 1rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: #161515;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 2rem;
+        transition: transform 0.2s;
+      }
+      .nav-content .cta-button {
+        color: white;
+        margin-left: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        background: white;
+        color: #ff6b6b;
+        cursor: pointer;
+        border-color: #161515;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+        margin-left: 20px;
+      }
+
+      #faq {
+        padding: 6rem 2rem;
+        background: white;
+        align-items: center;
+      }
+      .faq-title {
+        font-size: 2rem;
+        color: #2d3436;
+        margin-bottom: 1.5rem;
+      }
+
+      .accordion-item {
+        background: #f8f9fa;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+      }
+
+      .accordion-question {
+        padding: 1.5rem;
+        font-weight: 500;
+        color: #333;
+        transition: color 0.3s;
+        font-size: 1rem;
+      }
+
+      .accordion-answer {
+        padding: 1rem 1.5rem;
+        display: none;
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      .accordion-active .accordion-question {
+        color: #ff6b6b;
+        font-weight: bold;
+      }
+
+      .accordion-active .accordion-answer {
+        display: block;
+      }
+
+      /* Mobile Navbar */
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+      }
+      .mobile-menu a,
+      .mobile-menu .cta-button {
+        padding: 1rem;
+        border-bottom: 1px solid #f0f0f0;
+        text-align: center;
+        width: 100%;
+      }
+
+      footer {
+        background: #2d3436;
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .hero-content,
+        .author-content .faq-section {
+          grid-template-columns: 1fr;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        nav h1 {
+          margin: auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .author-content {
+          flex-direction: column;
+          text-align: center;
+          gap: 1rem;
+        }
+
+        .author-photo {
+          width: 150px;
+          margin-bottom: 1rem;
+        }
+
+        .author-description{
+          text-align: left;
+        }
+      }
+
+      .show-menu {
+        display: flex;
+      }
+
+      /* Social Media Links */
+      .social-media-links {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        padding-left: 30px;
+      }
+      .social-media-links img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.2s ease;
+      }
+
+      .social-media-links img:hover {
+        transform: scale(1.1);
+      }
